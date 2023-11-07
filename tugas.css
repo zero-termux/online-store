@@ -1,0 +1,82 @@
+* {
+  font-family: 'Hind Siliguri', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.jumbotron img {
+  width: 100%;
+  border-bottom: 5px solid rgb(19,126,212);
+  margin: 0;
+  padding: 0;
+}
+
+.row .col-md{
+  margin-left: auto;
+  margin-top: 15px;
+}
+
+.col h1 {
+  margin-top: 15px;
+}
+
+span {
+  color: rgb(19,126,212);
+}
+
+#keranjang p.card-text {
+  height: 250px;
+  width: 200px;
+}
+
+.btn {
+  margin-top: 5px;
+}
+
+#keranjang {
+  background-color: rgb(19,126,212);
+  color: white;
+  width: 100%;
+  margin: 0;
+  border-radius: 8px;
+}
+
+#produk .card {
+  padding: 8px;
+}
+
+footer p {
+  font-family: verdana;
+  opacity: 0.6;
+}
+
+.modal .modal-body p {
+  font-family: arial;
+  font-weight: 320;
+  font-size: 12px;
+  text-align: left;
+}
+
+.jumbotron img {
+  margin-top: 45px;
+}
+
+@media screen and (min-width: 600px) {
+  .navbar-nav {
+  margin-left: 70%;
+  }
+  .navbar-brand {
+    margin-left: 15px;
+  }
+  .row .col-md {
+    margin-left: 0;
+  }
+  .jumbotron img {
+  margin-top: -80px;
+  }
+}
