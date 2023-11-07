@@ -15,7 +15,6 @@ function smoothScroll(e) {
 }
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
   let keranjang = [];
 
