@@ -17,37 +17,38 @@ function smoothScroll(e) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  
   let keranjang = [];
 
-  // untuk menambahkan nama produk ke keranjang
-  function tambahKeKeranjang(namaProduk) {
-    keranjang.push(namaProduk);
+  function tambahKeKeranjang(namaProduk, hargaProduk) {
+    keranjang.push({ nama: namaProduk, harga: hargaProduk }); // Simpan sebagai objek
     perbaruiKeranjang();
   }
 
-  // untuk menghapus nama produk dari keranjang
   function hapusDariKeranjang(index) {
     keranjang.splice(index, 1);
     perbaruiKeranjang();
   }
 
-  // untuk memperbarui tampilan produk dalam keranjang
   function perbaruiKeranjang() {
     let keranjangElement = document.getElementById('keranjang-elemen');
     keranjangElement.innerHTML = '';
 
-    keranjang.forEach(function(namaProduk, index) {
-      let cardProduk = document.createElement('p');
-      cardProduk.classList.add('p', 'text-left', 'mb-5', 'mt-3');
+    keranjang.forEach(function(produk, index) {
+      let cardProduk = document.createElement('div'); // Ganti dari <p> menjadi <div>
+      cardProduk.classList.add('card', 'text-left', 'mb-5', 'mt-3');
       cardProduk.style.width = '16rem';
+      cardProduk.style.border = 'none';
 
-      let cardBody = document.createElement('p');
+      let cardBody = document.createElement('div'); // Ganti dari <p> menjadi <div>
       cardBody.classList.add('card-body');
 
       let cardTitle = document.createElement('h5');
       cardTitle.classList.add('card-title');
-      cardTitle.textContent = namaProduk;
+      cardTitle.textContent = produk.nama; // Ambil nama dari objek produk
+
+      let cardHarga = document.createElement('p');
+      cardHarga.classList.add('harga');
+      cardHarga.textContent = produk.harga; // Ambil harga dari objek produk
 
       let hapusButton = document.createElement('a');
       hapusButton.href = '#';
@@ -56,45 +57,44 @@ document.addEventListener('DOMContentLoaded', function() {
       hapusButton.addEventListener('click', function(event) {
         event.preventDefault();
         hapusDariKeranjang(index);
-        alert('produk dalam keranjang anda akan di hapus');
+        alert('Produk dalam keranjang anda akan dihapus');
       });
 
       cardBody.appendChild(cardTitle);
+      cardBody.appendChild(cardHarga);
       cardBody.appendChild(hapusButton);
       cardProduk.appendChild(cardBody);
       keranjangElement.appendChild(cardProduk);
     });
   }
 
-  // listener untuk tombol "Tambah ke keranjang"
   document.querySelectorAll('.btn-primary').forEach((tombol, indeks) => {
     tombol.addEventListener('click', (event) => {
       event.preventDefault();
       let namaProduk = document.querySelectorAll('.card-title')[indeks].innerText;
-      tambahKeKeranjang(namaProduk);
-      alert('produk berhasil ditambahkan');
+      let hargaProduk = document.querySelectorAll('.harga')[indeks].innerText;
+      tambahKeKeranjang(namaProduk, hargaProduk);
+      alert('Produk berhasil ditambahkan');
     });
   });
-
-document.querySelectorAll('.modal .btn-primary').forEach((tombol, indeks) => {
+  
+  document.querySelectorAll('.modal .btn-primary').forEach((tombol, indeks) => {
     tombol.addEventListener('click', (event) => {
       event.preventDefault();
       let namaProduk = document.querySelectorAll('.card-title')[indeks].innerText;
-      tambahKeKeranjang(namaProduk);
-      alert('produk berhasil ditambahkan');
+      let hargaProduk = document.querySelectorAll('.harga')[indeks].innerText;
+      tambahKeKeranjang(namaProduk, hargaProduk);
+      alert('Produk berhasil ditambahkan');
     });
   });
 
-  // listener untuk tombol "Hapus produk" di keranjang
   document.querySelector('.btn-danger').addEventListener('click', (event) => {
     event.preventDefault();
     hapusDariKeranjang(0);
   });
-
 });
 
-// untuk tombol "buat pesanan" di dalam keranjang
-document.querySelector('#keranjang .btn-primary').addEventListener('click', (event) => {
-  event.preventDefault();
-  alert('Pesanan Anda akan segera dikirimkan!');
-});
+  document.querySelector('#keranjang .btn-primary').addEventListener('click', (event) => {
+    event.preventDefault();
+    alert('Pesanan Anda akan segera dikirimkan!');
+  });
