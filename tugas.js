@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let hargaProduk = document.querySelectorAll('.harga')[indeks].innerText;
       tambahKeKeranjang(namaProduk, hargaProduk);
       alert('Produk berhasil ditambahkan');
+      produk.push({ nama : namaProduk, harga: hargaProduk })
     });
   });
   
@@ -84,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
       let hargaProduk = document.querySelectorAll('.harga')[indeks].innerText;
       tambahKeKeranjang(namaProduk, hargaProduk);
       alert('Produk berhasil ditambahkan');
+      produk.push({ nama : namaProduk, harga: hargaProduk })
     });
   });
 
@@ -93,7 +95,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-  document.querySelector('#keranjang .btn-primary').addEventListener('click', (event) => {
-    event.preventDefault();
-    alert('Pesanan Anda akan segera dikirimkan!');
-  });
+document.getElementById('tombolKlik').addEventListener('click', function() {
+  // Kode untuk navigasi atau pengalihan halaman
+  if (keranjang.length === 0) {
+    alert('Tidak ada produk dalam keranjang');
+  }
+  window.location.href = 'checkout.html'; // Ganti 'halaman_lain.html' dengan URL halaman tujuan 
+});
