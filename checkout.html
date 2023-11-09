@@ -69,7 +69,7 @@
 
     <section id="form">
         <h1 class="text-center">FORMULIR PENGIRIMAN</h1>
-        <p class="text-center">mohon untuk mengisi semua keterangan yang ada agar memudahkan pengiriman.</p>
+        <p class="text-center m-3">mohon untuk mengisi semua keterangan yang ada agar memudahkan pengiriman.</p>
         <hr>
         <div class="container">
             <div class="row justify-content-center">
@@ -81,7 +81,7 @@
                           <label for="exampleInputEmail1" class="form-label mt-2">Email anda :</label>
                           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                           <label for="nomer" class="form-label mt-2">Nomor telepon :</label>
-                          <input type="nomor" class="form-control" id="nomor" aria-describedby="nomer">
+                          <input type="tel" class="form-control" id="nomor" aria-describedby="nomer" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                           <br>
                           <h2>INFORMASI PEMBAYARAN</h2>
                           <hr>
