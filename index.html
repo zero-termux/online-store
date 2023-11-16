@@ -31,6 +31,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -42,7 +43,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
+        <div class="navbar-nav ms-auto">
           <a class="nav-link active" aria-current="page" href="#Home">Home</a>
           <a class="nav-link" href="#produk">produk</a>
           <a class="nav-link" href="#keranjang">keranjang</a>
@@ -63,6 +64,14 @@
         <div class="row">
           <div class="col text-center">
             <h1>produk</h1>
+            <button class="btn btn-secondary dropdown-toggle  mt-2 mb-2" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: #0d6efd;">
+              Kategori
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#Home">Semua</a></li>
+              <li><a class="dropdown-item" href="#produk">Laptop</a></li>
+              <li><a class="dropdown-item" href="#aks">Perlengkapan</a></li>
+            </ul>
             <hr>
           </div>
         </div>
@@ -78,7 +87,7 @@
                   karena daya tahan yang kuat dan desain yang ergonomis.</p>
                 <p class="card-text">Harga : <span class="harga">$288</span></p>
                 <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#lightbox1">Lihat detail</a>
-                <a href="#" class="btn btn-primary">Tambah ke keranjang</a>
+                <a href="#" class="btn btn-primary">Tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></a>
               </div>
             </div>
           </div>
@@ -93,7 +102,7 @@
                   dan harga yang terjangkau.</p>
                 <p class="card-text">Harga : <span class="harga">$320</span></p>
                 <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#lightbox2">Lihat detail</a>
-                <a href="#" class="btn btn-primary">Tambah ke keranjang</a>
+                <a href="#" class="btn btn-primary">Tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></a>
               </div>
             </div>
           </div>
@@ -104,14 +113,113 @@
               <hr>
               <div class="card-body">
                 <h5 class="card-title">LAPTOP MACBOOK</h5>
-                <p class="card-text"> Laptop ini menggunakan sistem operasi macOS yang eksklusif. MacBook dikenal dengan desain yang elegan 
-                  dan tipis, serta kualitas pembuatan yang premium.</p>
+                <p class="card-text">Laptop MacBook ini dikenal dengan desain yang elegan 
+                  dan tipis dengan sistem operasi sendiri, serta kualitas pembuatan yang premium.</p>
                 <p class="card-text">Harga : <span class="harga">$768</span></p>
                 <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#lightbox3">Lihat detail</a>
-                <a href="#" class="btn btn-primary">Tambah ke keranjang</a>
+                <a href="#" class="btn btn-primary">Tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></a>
               </div>
             </div>
           </div>
+
+          <div class="col-md">
+            <div class="card" style="width: 18rem;">
+              <img src="hp.jpg" class="card-img-top" alt="produk4">
+              <hr>
+              <div class="card-body">
+                <h5 class="card-title">LAPTOP HP</h5>
+                <p class="card-text">Laptop HP dikenal karena kombinasi kinerja yang handal, dan inovasi teknologi. HP punya berbagai jenis laptop, mulai dari model konsumen hingga bisnis dan gaming.</p>
+                <p class="card-text">Harga : <span class="harga">$310</span></p>
+                <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#lightbox4">Lihat detail</a>
+                <a href="#" class="btn btn-primary">Tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card" style="width: 18rem;">
+              <img src="rog.jpg" class="card-img-top" alt="produk5">
+              <hr>
+              <div class="card-body">
+                <h5 class="card-title">LAPTOP ROG</h5>
+                <p class="card-text">Laptop ROG biasanya dilengkapi dengan prosesor grafis yang kuat, dan penyimpanan cepat untuk menangani tugas-tugas berat seperti gaming modern, streaming, dan tugas kreatif.</p>
+                <p class="card-text">Harga : <span class="harga">$840</span></p>
+                <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#lightbox5">Lihat detail</a>
+                <a href="#" class="btn btn-primary">Tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></a>
+              </div>
+            </div>
+          </div>
+        
+
+        <div class="col-md">
+            <div class="card" style="width: 18rem;">
+              <img src="advan.jpg" class="card-img-top" alt="produk6" style="height: 13rem!important;">
+              <hr>
+              <div class="card-body">
+                <h5 class="card-title">LAPTOP ADVAN</h5>
+                <p class="card-text">laptop Advan umumnya menawarkan beragam fitur dan spesifikasi yang sesuai dengan kebutuhan pengguna sehari-hari.</p>
+                <p class="card-text">Harga : <span class="harga">$389</span></p>
+                <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#lightbox6">Lihat detail</a>
+                <a href="#" class="btn btn-primary">Tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <br><br>
+          <div class="row">
+          <div class="col-md text-center">
+            <h1 id="aks">perlengkapan</h1>
+            <hr>
+          </div>
+        </div>
+        <br><br>
+
+          <div class="row">
+          <div class="col-md">
+            <div class="card" style="width: 18rem;">
+              <img src="mouse.png" class="card-img-top" alt="produk7">
+              <hr>
+              <div class="card-body">
+                <h5 class="card-title">MAOUSE WIRELESS</h5>
+                <p class="card-text">Mouse wireless memiliki kelebihan utama berupa mobilitas tanpa kabel, dan fleksibilitas penggunaan di berbagai permukaan.</p>
+                <p class="card-text">Harga : <span class="harga">$63</span></p>
+                <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#lightbox7">Lihat detail</a>
+                <a href="#" class="btn btn-primary">Tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card" style="width: 18rem;">
+              <img src="stand.jpg" class="card-img-top" alt="produk8">
+              <hr>
+              <div class="card-body">
+                <h5 class="card-title">STAND LAPTOP</h5>
+                <p class="card-text">Stand laptop adalah aksesori yang dirancang untuk meningkatkan ergonomi dan kenyamanan penggunaan laptop.</p>
+                <p class="card-text">Harga : <span class="harga">$11</span></p>
+                <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#lightbox8">Lihat detail</a>
+                <a href="#" class="btn btn-primary">Tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md">
+            <div class="card" style="width: 18rem;">
+              <img src="kybrd.png" class="card-img-top" alt="produk9">
+              <hr>
+              <div class="card-body">
+                <h5 class="card-title">KEYBOARD MECHANICAL</h5>
+                <p class="card-text">Keyboard yang meliputi respon yang lebih cepat, daya tahan yang tinggi, dan pengalaman mengetik yang lebih memuaskan dan nyaman.</p>
+                <p class="card-text">Harga : <span class="harga">$76</span></p>
+                <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#lightbox9">Lihat detail</a>
+                <a href="#" class="btn btn-primary">Tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></a>
+              </div>
+            </div>
+          </div>
+
+          
         </div>
       </section>
       <br><br>
@@ -141,7 +249,7 @@
       </div>
       </center>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">tambah ke keranjang</button>
+        <button type="button" class="btn btn-primary">tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></button>
       </div>
     </div>
   </div>
@@ -171,7 +279,7 @@
       </div>
       </center>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">tambah ke keranjang</button>
+        <button type="button" class="btn btn-primary">tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></button>
       </div>
     </div>
   </div>
@@ -204,17 +312,186 @@
       </div>
       </center>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">tambah ke keranjang</button>
+        <button type="button" class="btn btn-primary">tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></button>
       </div>
     </div>
   </div>
 </div>
+
+<div class="modal" id="lightbox4" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">detail produk</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <center>
+     <div class="modal-body">
+          <img src="hp.jpg" class="img-fluid" alt="Gambar Produk 3">
+      </div>
+      <div class="modal-body">
+        <p>HP 14s 14s CF2508TU:
+        <br>
+- Prosesor : Intel Pentium Gold 6405U
+<br>
+- RAM : Beberapa pilihan, mulai dari 4GB hingga 8GB
+<br>
+- Penyimpanan : SSD dengan kapasitas mulai dari 256GB hingga 1TB
+<br>
+- Layar : Layar 14 Inch dengan resolusi 1920 x 1080 Pixel
+<br>
+- Kartu Grafis : GeForce RTX 3070
+</p>
+      </div>
+      </center>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="lightbox5" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">detail produk</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <center>
+     <div class="modal-body">
+          <img src="rog.jpg" class="img-fluid" alt="Gambar Produk 3">
+      </div>
+      <div class="modal-body">
+        <p>ROG  Flow X13:
+        <br>
+- Prosesor : AMD Ryzen™ 7 6800HS Mobile Processor
+<br>
+- RAM : Beberapa pilihan, mulai dari 8GB hingga 16GB
+<br>
+- Penyimpanan : SSD dengan kapasitas 512GB M.2 2230
+<br>
+- Layar : 13.4-inch WUXGA (1920 x 1200) 16:10, 500nits, anti-glare, IPS-level, Pantone validated, touch panel, 120 Hz, 100% sRGB
+<br>
+- Kartu Grafis : AMD Radeon RX 6850M XT
+</p>
+      </div>
+      </center>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="lightbox6" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">detail produk</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <center>
+     <div class="modal-body">
+          <img src="advan.jpg" class="img-fluid" alt="Gambar Produk 3">
+      </div>
+      <div class="modal-body">
+        <p>ADVAN SOULMATE:
+        <br>
+- Prosesor : Intel® Gemini Lake N4020
+<br>
+- RAM : 4GB DDR4 (upgradable)
+<br>
+- Penyimpanan : 128GB (upgradable)
+<br>
+- Layar : 14 inch HD 1366 x 768
+<br>
+- Kartu Grafis : Intel® Integrated Graphics
+</p>
+      </div>
+      </center>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="lightbox7" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">detail produk</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <center>
+     <div class="modal-body">
+          <img src="mouse.png" class="img-fluid" alt="Gambar Produk 3">
+      </div>
+      <div class="modal-body">
+        <p>Mouse wireless memiliki kelebihan utama berupa mobilitas tanpa kabel, menciptakan tata letak meja yang bersih, dan fleksibilitas penggunaan di berbagai permukaan. Kemudahan pemasangan, stabilitas sinyal, dan beberapa model yang dirancang ergonomis membuatnya populer di kalangan pengguna komputer yang menginginkan kenyamanan tanpa terikat oleh kabel. Meskipun demikian, respons kecepatan dan daya tahan baterai tetap menjadi pertimbangan tergantung pada model dan merek yang dipilih.
+</p>
+      </div>
+      </center>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="lightbox8" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">detail produk</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <center>
+     <div class="modal-body">
+          <img src="stand.jpg" class="img-fluid" alt="Gambar Produk 3">
+      </div>
+      <div class="modal-body">
+        <p>Stand laptop adalah aksesori yang dirancang untuk meningkatkan ergonomi dan kenyamanan penggunaan laptop. Biasanya terbuat dari bahan ringan seperti aluminium atau plastik, stand laptop memberikan ketinggian tambahan untuk layar, membantu mengurangi tekanan pada leher dan bahu pengguna. Selain itu, stand ini sering dilengkapi dengan desain yang dapat dilipat atau disesuaikan, memungkinkan pengguna untuk menyesuaikan sudut pandang dan menciptakan tata letak meja yang lebih terorganisir. 
+</p>
+      </div>
+      </center>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="lightbox9" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">detail produk</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <center>
+     <div class="modal-body">
+          <img src="kybrd.png" class="img-fluid" alt="Gambar Produk 3">
+      </div>
+      <div class="modal-body">
+        <p>Keyboard mechanical adalah perangkat input yang menggunakan saklar mekanis untuk setiap tombolnya, berbeda dengan keyboard membran yang lebih umum. Setiap tombol pada keyboard mechanical memiliki saklar khusus yang memberikan umpan balik takttil dan suara klik yang khas saat ditekan. Kelebihan keyboard mechanical meliputi respon yang lebih cepat, daya tahan yang tinggi (biasanya dapat mencapai jutaan kali tekan), dan pengalaman mengetik yang lebih nyaman berkat umpan balik takttil yang jelas.
+</p>
+      </div>
+      </center>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">tambah ke keranjang<i class="bi bi-bag-plus ms-2" style="width: 12px;"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- akhir modal -->
 
       <section id="keranjang">
         <div class="row">
           <div class="col text-center">
-            <h1>keranjang</h1>
+            <h1>keranjang<i class="bi bi-bag ms-2" style="width: 12px;"></i></h1>
             <hr>
           </div>
         </div>
