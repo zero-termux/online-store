@@ -61,10 +61,23 @@ footer p {
   margin-top: 45px;
 }
 
+.card p {
+  font-size: 14px;
+}
+
+.card img {
+  height: 8.5rem!important;
+  width: 12.5rem!important;
+  margin: auto;
+}
+
+.modal img {
+  height: 14.5rem!important;
+  width: 18.5rem!important;
+  margin: auto;
+}
+
 @media screen and (min-width: 600px) {
-  .navbar-nav {
-  margin-left: 70%;
-  }
   .navbar-brand {
     margin-left: 15px;
   }
@@ -73,5 +86,9 @@ footer p {
   }
   .jumbotron img {
   margin-top: -80px;
+  }
+  .card img {
+    height: 11.5rem!important;
+    width: 16.5rem!important;
   }
 }
