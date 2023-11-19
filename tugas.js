@@ -102,3 +102,29 @@ document.getElementById('tombolKlik').addEventListener('click', function() {
   }
   window.location.href = 'checkout.html'; // Ganti 'halaman_lain.html' dengan URL halaman tujuan 
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const themeToggleIcon = document.querySelector('.bi-sun-fill, .bi-moon-fill');
+
+  themeToggleIcon.addEventListener('click', function () {
+    // Periksa apakah tema saat ini adalah "dark"
+    const isDarkMode = document.documentElement.getAttribute('data-bs-theme') === 'dark';
+
+    // Ganti tema
+    document.documentElement.setAttribute('data-bs-theme', isDarkMode ? 'light' : 'dark');
+
+    // Tambahkan class dengan animasi pada ikon
+    themeToggleIcon.classList.add('icon-transition');
+
+    // Jalankan fungsi setelah animasi selesai
+    setTimeout(function () {
+      // Hapus class setelah animasi selesai
+      themeToggleIcon.classList.remove('icon-transition');
+
+      // Ganti kelas ikon i dengan animasi
+      themeToggleIcon.classList.toggle('bi-moon-fill', isDarkMode);
+      themeToggleIcon.classList.toggle('bi-sun-fill', !isDarkMode);
+    }, 300);
+  });
+});
