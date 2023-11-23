@@ -49,45 +49,17 @@
         #hasilInvoice p span {
           color: rgb(19,126,212);
         }
-
-        @keyframes rotateAndFadeOut {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  
-  40% {
-    transform: scale(1.2);
-    opacity: 0.8;
-  }
-  
-  80% {
-    transform: scale(0.5);
-    opacity: 0.4;
-  }
-  
-  100% {
-    transform: scale(0);
-    opacity: 0;
-  }
-}
-
-.icon-transition {
-  animation: rotateAndFadeOut 0.3s ease;
-}
   </style>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Toko Laptop Abid</a>
-          <i class="bi bi-moon-fill mt-1 ms-auto me-3" style="color: white; font-size: 20px;"></i>
+
     </div>
   </nav>
 
@@ -137,7 +109,14 @@
                           <input type="nomor" class="form-control" id="nomorRekening" aria-describedby="nomer">
                           <label for="nama" class="form-label mt-2">Nama pemegang rekening :</label>
                           <input type="name" class="form-control" id="namaPemegangRekening" aria-describedby="nama">
+                          <br>
+                          <h6 class="text-left">
+                            Produk : <p id="produk" style="color: rgb(19,126,212);" class="mt-2">
+                            
+                            </p>
+                          </h6>
                         </div>
+                        
                         <button type="submit" class="btn btn-primary ms-4">Submit</button>
                       </form>
                 </div>
@@ -146,8 +125,12 @@
     </section>
 
     <br>
-    <div id="hasilInvoice" class="container mt-4 text-center">
+    <div class="container mt-4 text-left">
+      <div class="row justify-content-center">
+        <div class="col-md-7" id="hasilInvoice">
         <!-- Hasil invoice akan ditampilkan di sini -->
+        </div>
+     </div>
       </div>
 
 <br><br>
@@ -176,10 +159,13 @@
       var ongkir = document.getElementById('pengiriman').value;
       var nomorRekening = document.getElementById('nomorRekening').value;
       var namaPemegangRekening = document.getElementById('namaPemegangRekening').value;
+      var ProdukHTML = keranjang.map(function(item) {
+      return `<li>${item.nama} : <span style="color: rgb(19,126,212);">${item.harga}</span></li>`;
+      }).join('');
 
       // Membuat invoice HTML
       var invoiceHTML = `
-        <h2>INFORMASI PEMBAYARAN</h2>
+        <h2 class="text-center">INFORMASI PEMBAYARAN</h2>
         <hr>
         <p><span>Nama :</span> ${nama}</p>
         <p><span>Email :</span> ${email}</p>
@@ -188,11 +174,12 @@
         <p><span>Ongkir :</span> ${ongkir}</p>
         <p><span>Nomor Rekening :</span> ${nomorRekening}</p>
         <p><span>Nama Pemegang Rekening :</span> ${namaPemegangRekening}</p>
-        <button type="submit" class="btn btn-primary ms-4 mt-2 mb-5" id="selesai">Kirim</button>
+        <p><span>Keterangan Produk :</span><ul>${ProdukHTML}</ul></p>      
+        <button type="submit" class="btn btn-primary mt-2 mb-5" id="selesai">Kirim</button>
       `;
 
       // Menampilkan invoice di halaman
-  var hasilInvoice = document.createElement('div');
+  var hasilInvoice = document.createElement('div.p-4');
   hasilInvoice.innerHTML = invoiceHTML;
   document.getElementById('hasilInvoice').appendChild(hasilInvoice);
 
@@ -203,30 +190,23 @@
   });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const themeToggleIcon = document.querySelector('.bi-sun-fill, .bi-moon-fill');
+// Mengambil data keranjang belanja dari local storage
+var keranjang = localStorage.getItem('keranjang');
+// Memeriksa apakah data keranjang belanja ada di local storage
+if (keranjang) {
+  // Jika ada, maka mengubah data keranjang dari string menjadi array
+  keranjang = JSON.parse(keranjang);
+  // Mengambil element dengan id 'prroduk'
+  var elementProduk = document.getElementById('produk');
 
-  themeToggleIcon.addEventListener('click', function () {
-    // Periksa apakah tema saat ini adalah "dark"
-    const isDarkMode = document.documentElement.getAttribute('data-bs-theme') === 'dark';
+  // Menggabungkan data keranjang belanja menjadi satu string
+  var listItemHTML = keranjang.map(function(item) {
+    return `<li>${item.nama} : ${item.harga}</li>`;
+  }).join('');
 
-    // Ganti tema
-    document.documentElement.setAttribute('data-bs-theme', isDarkMode ? 'light' : 'dark');
-
-    // Tambahkan class dengan animasi pada ikon
-    themeToggleIcon.classList.add('icon-transition');
-
-    // Jalankan fungsi setelah animasi selesai
-    setTimeout(function () {
-      // Hapus class setelah animasi selesai
-      themeToggleIcon.classList.remove('icon-transition');
-
-      // Ganti kelas ikon i dengan animasi
-      themeToggleIcon.classList.toggle('bi-moon-fill', isDarkMode);
-      themeToggleIcon.classList.toggle('bi-sun-fill', !isDarkMode);
-    }, 300);
-  });
-});
+  // Menampilkan nama produk dan harga produk di element 'prroduk'
+  elementProduk.innerHTML = listItemHTML;
+}
     </script>
 </body>
 </html>
