@@ -1,4 +1,6 @@
 const navLinks = document.querySelectorAll('nav a');
+let keranjangString = localStorage.getItem('keranjang');
+let keranjangData = JSON.parse(keranjangString);
 
 navLinks.forEach(link => {
     link.addEventListener('click', smoothScroll);
@@ -21,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
   function tambahKeKeranjang(namaProduk, hargaProduk) {
     keranjang.push({ nama: namaProduk, harga: hargaProduk }); // Simpan sebagai objek
     perbaruiKeranjang();
+
+    let keranjangString = JSON.stringify(keranjang);
+    localStorage.setItem('keranjang', keranjangString);
   }
 
   function hapusDariKeranjang(index) {
