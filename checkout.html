@@ -39,6 +39,32 @@
         margin: 0;
         }
 
+       @keyframes rotateAndFadeOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  40% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  
+  80% {
+    transform: scale(0.5);
+    opacity: 0.4;
+  }
+  
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.icon-transition {
+  animation: rotateAndFadeOut 0.3s ease;
+}
+    
         .jumbotron img {
         width: 100%;
         border-bottom: 5px solid rgb(19,126,212);
@@ -53,13 +79,14 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Toko Laptop Abid</a>
-
+      <i class="bi bi-moon-fill mt-1 ms-auto me-3" style="color: white; font-size: 20px;"></i>
     </div>
   </nav>
 
@@ -207,6 +234,31 @@ if (keranjang) {
   // Menampilkan nama produk dan harga produk di element 'prroduk'
   elementProduk.innerHTML = listItemHTML;
 }
+
+      document.addEventListener('DOMContentLoaded', function () {
+  const themeToggleIcon = document.querySelector('.bi-sun-fill, .bi-moon-fill');
+
+  themeToggleIcon.addEventListener('click', function () {
+    // Periksa apakah tema saat ini adalah "dark"
+    const isDarkMode = document.documentElement.getAttribute('data-bs-theme') === 'dark';
+
+    // Ganti tema
+    document.documentElement.setAttribute('data-bs-theme', isDarkMode ? 'light' : 'dark');
+
+    // Tambahkan class dengan animasi pada ikon
+    themeToggleIcon.classList.add('icon-transition');
+
+    // Jalankan fungsi setelah animasi selesai
+    setTimeout(function () {
+      // Hapus class setelah animasi selesai
+      themeToggleIcon.classList.remove('icon-transition');
+
+      // Ganti kelas ikon i dengan animasi
+      themeToggleIcon.classList.toggle('bi-moon-fill', isDarkMode);
+      themeToggleIcon.classList.toggle('bi-sun-fill', !isDarkMode);
+    }, 300);
+  });
+});
     </script>
 </body>
 </html>
