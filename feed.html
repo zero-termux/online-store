@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>feedback</title>
+  <link  rel= "apple-touch-icon"  size= "57x57"  href= "apple-icon-57x57.png" > 
+<link  rel= "apple-touch-icon"  size= "60x60"  href= "apple -icon-60x60.png" > 
+<link  rel= "apple-touch-icon"  size= "72x72"  href= "apple-icon-72x72.png" > 
+<link  rel= "apple-touch-icon"  size= "76x76"  href= "apple-icon-76x76.png" > 
+<link  rel= "apple-touch-icon"  size= "114x114"  href= "apple-icon-114x114.png" > 
+<link  rel= " apple-touch-icon"  size= "120x120"  href= "apple-icon-120x120.png" > 
+<link  rel= "apple-touch-icon"  size= "144x144"  href= "apple-icon-144x144. png" > 
+<link  rel= "apple-touch-icon"  size= "152x152"  href= "apple-icon-152x152.png" > 
+<link  rel= "apple-touch-icon"  size= "180x180"  href= "apple-icon-180x180.png" > 
+<link  rel= "icon"  type= "image/png"  size= "192x192"   href= "android-icon-192x192.png" > 
+<link  rel= "icon"  ketik= "gambar/png"  ukuran= "32x32"  href= "favicon-32x32.png" > 
+<link  rel= "icon"  type= "gambar/png"  ukuran= "96x96"  href= "favicon-96x96. png" > 
+<link  rel= "icon"  type= "image/png"  size= "16x16"  href= "favicon-16x16.png" > 
+<link  rel= "manifest"  href= "manifest.json" > 
+<meta  name= "msapplication-TileColor"  content= "#ffffff" > 
+<meta  name= "msapplication-TileImage"  content= "ms-icon-144x144.png" > 
+<meta  name= "theme-color"  isi= "#ffffff" >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+  <style>
+            * {
+        font-family: 'Hind Siliguri', sans-serif;
+        padding: 0;
+        margin: 0;
+        }
+
+        body {
+        padding: 0;
+        margin: 0;
+        }
+
+        section#isi {
+          margin-top: 100px;
+        }
+
+        footer p {
+        font-family: verdana;
+        opacity: 0.6;
+        }
+  </style>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <i class="bi bi-arrow-left-circle ms-3 mt-2" class="navbar-brand" id="kb" style="color: white; font-size: 35px; line-height: 1.5;"></i>
+      <a class="navbar-brand ms-auto" href="#">Toko Laptop Abid</a>
+    </div>
+  </nav>
+
+  <!-- awal isi -->
+  <section id="isi">
+    <h1 class="text-center">TULIS FEEDBACK ANDA</h1>
+        <hr>
+    <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-7">
+              <form id="formulir" action="https://formsubmit.co/mr.zero7579@gmail.com">
+                  <div class="mb-1 p-4">
+                    <label for="nama" class="form-label">Nama lengkap :</label>
+                    <input type="name" class="form-control" id="nama" aria-describedby="nama">
+                    <label for="exampleInputEmail1" class="form-label mt-2">Email anda :</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                    <label for="exampleFormControlTextarea1" class="form-label mt-2">Example textarea</label>
+                     <textarea class="form-control" id="textarea1" rows="3"></textarea>
+                  </div>      
+                  <button type="submit" class="btn btn-primary ms-4">Submit</button>
+                </form>
+          </div>
+      </div>
+  </div>
+  </section>
+  <!-- akhir isi -->
+
+  
+  <br><br>
+
+  <footer>
+    <hr>
+    <center>
+      <p>
+        copyright by abid 2023
+      </p>
+    </center>
+  </footer>
+
+  <script>
+    document.getElementById('kb').addEventListener('mouseover', function() {
+this.classList.remove('bi-arrow-left-circle');
+this.classList.add('bi-arrow-left-circle-fill');
+}); 
+
+document.getElementById('kb').addEventListener('mouseout', function() {
+this.classList.remove('bi-arrow-left-circle-fill');
+this.classList.add('bi-arrow-left-circle');
+});  
+
+document.getElementById('kb').addEventListener('click', function() {
+  window.location.href = 'index.html'; 
+});
+  </script>
+</body>
+</html>
