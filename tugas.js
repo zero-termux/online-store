@@ -133,3 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 300);
   });
 });
+
+document.getElementById('fd').addEventListener('click', function() {
+  window.location.href = 'feed.html'; 
+});
